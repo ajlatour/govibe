@@ -1,0 +1,22 @@
+[
+  {
+    "Name": "tracing",
+    "Summary": "OpenTelemetry spans for every request and call, exported over OTLP, and Jaeger in the local stack (make tracing). Off until OTEL_EXPORTER_OTLP_ENDPOINT is set; the service's only third-party dependency."
+  },
+  {
+    "Name": "perf",
+    "Summary": "Performance testing: k6 load profiles and their CI comparison on every pull request (with an allocation gate), main's performance history and a nightly soak, CI-time records, and a Grafana dashboard in the local stack (make monitor)."
+  },
+  {
+    "Name": "release",
+    "Summary": "Publishing a release: the Release workflow, which builds the image for amd64 and arm64 with an SBOM and provenance, smoke-tests it and pushes it to GHCR, and the GitHub release with its docs. Versioning stays: the changelog, make release-prepare and release-tag."
+  },
+  {
+    "Name": "validation",
+    "Summary": "Checking every request against an external request-validation service (VALIDATOR_URL): failing closed or open, in shadow mode behind a flag, with its metrics and readiness check, and a WireMock stub of the service locally."
+  },
+  {
+    "Name": "flags",
+    "Summary": "Feature flags from flagd, an OpenFeature sidecar, over OFREP: cached, with embedded defaults for when flagd can't answer, and the example list's total behind one. Without them, request validation always enforces."
+  }
+]
